@@ -7,11 +7,11 @@ const reviewSchema = mongoose.Schema(
       required: true,
     },
     rating: {
-      type: String,
+      type: Number,
       required: true,
     },
     comment: {
-      type: Number,
+      type: String,
       required: true,
     },
     user: {
