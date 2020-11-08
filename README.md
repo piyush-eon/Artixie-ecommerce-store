@@ -1,4 +1,4 @@
-# Artistaan-ecommerce-store
+# Artixie-ecommerce-store
 
 <h3>Selling Creative stuff for super creative beings</h3>
 

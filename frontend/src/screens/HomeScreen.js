@@ -5,6 +5,9 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { listProducts } from "../actions/productActions";
 import { useDispatch, useSelector } from "react-redux";
+import ProductCarousel from "../components/ProductCarousel";
+import Meta from "../components/Meta";
+import { Link } from "react-router-dom";
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
@@ -22,7 +25,21 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-      <h1>Latest Product</h1>
+      <Meta />
+      {!keyword ? (
+        <>
+          <ProductCarousel />
+          <h1>Latest Product</h1>
+        </>
+      ) : (
+        <>
+          <Link to="/" className="btn btn-light">
+            Go Back
+          </Link>
+          <h1>Search Results for "{keyword}"</h1>
+        </>
+      )}
+
       {loading ? (
         <Loader />
       ) : error ? (
